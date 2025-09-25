@@ -1,6 +1,6 @@
 1 引言
 1.1 编写目的
-本文档旨在详细说明"天气之子"主题网站的功能和性能需求，以便开发团队按照规约进行开发。
+这是我大学一来第一个前端小项目，出于兴趣，确实是印象颇深
 <img width="2507" height="1256" alt="QQ截图20250925203544" src="https://github.com/user-attachments/assets/7b6698b3-cc04-4045-8b28-f72c3ede4dd1" />
 
 1.2 背景
@@ -27,11 +27,9 @@ content1：包含一个级别3标题和与导航菜单视频背景相同的视�
 content2：包含级别1标题、电影故事描述、相关图片、帆高描述、合作创建网站的描述以及关于未来相遇的描述等内容。
 音乐播放器：包含播放/暂停按钮和背景音乐文件。
 弹窗：点击"关于我们"链接时打开的包含小组成员描述和关闭按钮的弹窗。
- 页面底部：包含版权信息和备案号。
-<img width="2087" height="1102" alt="QQ截图20250925204638" src="https://github.com/user-attachments/assets/1fd67f30-9dab-489e-b9da-a6c6abab4b64" />
+<img width="1925" height="1262" alt="QQ截图20250925204650" src="https://github.com/user-attachments/assets/aa2ffd56-947b-493b-b25d-cf17a516eb04" />
 
-2.2 用户特点
-用户对"天气之子"电影有兴趣，希望了解更多相关信息。
-用户喜欢浏览网页上的图片、视频和音乐等多媒体内容。
 
-这里我用了大佬IvanLuLyf集成的https://github.com/IvanLuLyf/OtenkiGirl 网站实现了天气之子中阳菜买卖晴天的网站
+
+
+这里我用了大佬IvanLuLyf集成的https://github.com/IvanLuLyf/OtenkiGirl 网站实现了天气之子中阳菜买卖晴天的网站（仍然是纯前端，没有借助数据库，后端数据使用GUN）
