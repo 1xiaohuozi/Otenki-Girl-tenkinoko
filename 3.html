@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>天气之子</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="wawa.ico">
+</head>
+
+<body>
+  <p> </p>
+  <div id="music-button" class="music-button" onclick="toggleMusic()">
+    <img src="img/6.png" alt="按钮图片">
+    <span id="music-status" class="play-icon">▶️</span>
+  </div>
+  <video id="video-background" autoplay loop muted>
+    <source src="img/1.mp4" type="video/mp4">
+  </video>
+  <nav class="menu">
+    <ul class="nav-list">
+      <li><a href="index.html" class="tab-active">二人の物語</a></li>
+      <li><a href="2.html">现实の晴女</a></li>
+      <li><a href="#">人物紹介</a></li>
+      <li><a href="OtenkiGirl-master/index.html">晴女のお店</a></li>
+      <li><a href="5.html">少年の語録</a></li>
+      <li class="dropdown">
+        <a href="6.html">新海誠系列</a>
+        <div class="dropdown-content">
+          <a href="#" id="about-link" style="text-align:  center;">关于我们</a>
+          <a href="6.html" style="text-align:  center;">新海誠</a>
+        </div>
+
+      </li>
+
+    </ul>
+  </nav>
+
+  <div id="overlay"></div>
+
+  <div id="popup-container">
+    <div id="popup-content">
+      <h3>小组成员</h3>
+      <p class="bold-text">1.Hallo（主题框架板块搭建与设计，内容填充与布局）</p>
+      <p class="bold-text">2.罗航（《晴女的小店》板块的javascript设计）</p>
+      <p class="bold-text">3.刘栋（《晴女的小店》板块的html页面设计）</p>
+      <button id="close-button">关闭</button>
+    </div>
+  </div>
+
+  <div id="content1">
+    <h3>人物紹介</h3>
+    <video id="video-background" autoplay loop muted>
+      <source src="img/1.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="content2">
+    <div class="image-container-2">
+      <a>
+        <img src="img/阳菜.png" alt="图片" class="circle-image lazy">
+      </a>
+      <p class="bold-text">
+        天野阳菜，一名住在东京的中学生，拥有改变天气的能力，在母亲去世后与弟弟天野凪相依为命。机缘巧合下认识了离家出走的森岛帆高，在帆高的帮助下改变了作为晴女被祭天的命运。并于三年后与他再次相遇。</p>
+    </div>
+    <a class="image-link">
+      <img src="img/分割线.png" alt="图片" class="rectangle-image image6 lazy">
+    </a>
+    <div class="image-container-2">
+      <a>
+        <img src="img/帆高.png" alt="图片" class="circle-image lazy">
+      </a>
+      <p class="bold-text">森岛帆高，从家乡离家出走来到东京，与和弟弟相依为命的天野阳菜相识并相爱，帮助阳菜改变了作为晴女被祭天的命运，并于三年后与阳菜再次相遇并拥抱在一起。</p>
+    </div>
+    <a class="image-link">
+      <img src="img/分割线.png" alt="图片" class="rectangle-image image6 lazy">
+    </a>
+    <div class="image-container-2">
+      <a>
+        <img src="img/须贺圭介.png" alt="图片" class="circle-image lazy">
+      </a>
+      <p class="bold-text">须贺圭介，在东京经营着一家小编辑事务所的中年男人。他本人也是撰稿人，主要给超自然类杂志投稿。他雇用了苦于无处可去的帆高，对他关照有加。和因交通事故丧命的妻子之间育有一个身患哮喘的女儿。
+      </p>
+    </div>
+    <a class="image-link">
+      <img src="img/分割线.png" alt="图片" class="rectangle-image image6 lazy">
+    </a>
+    <div class="image-container-2">
+      <a>
+        <img src="img/须贺夏美.png" alt="图片" class="circle-image lazy">
+      </a>
+      <p class="bold-text">须贺夏美，一边在须贺事务所工作、一边在外面奔走采访的女大学生。须贺圭介的侄女。</p>
+    </div>
+    <a class="image-link">
+      <img src="img/分割线.png" alt="图片" class="rectangle-image image6 lazy">
+    </a>
+    <div class="image-container-2">
+      <a>
+        <img src="img/天野凪.png" alt="图片" class="circle-image lazy">
+      </a>
+      <p class="bold-text">
+        天野凪，阳菜的弟弟，小学四年级学生。虽然还是小学生，但言行举止却很成熟，很受女孩子欢迎。被缺乏恋爱经验的帆高称呼为前辈。另一方面，他又非常担心姐姐阳菜与帆高两人的恋情，有着符合年龄的孩子气。对姐姐与帆高两人的互动爱情交往永远支持看好的。
+      </p>
+    </div>
+    <a class="image-link">
+      <img src="img/分割线.png" alt="图片" class="rectangle-image image6 lazy">
+    </a>
+    <div class="image-container-2">
+      <a>
+        <img src="img/立花富美.png" alt="图片" class="circle-image lazy">
+      </a>
+      <p class="bold-text">立花富美，老妇人，立花泷（你的名字男主）的奶奶。她拜托帆高和阳菜来帮助实现愿望。手上带有泷的妻子宫水三叶的绳结。</p>
+    </div>
+    <a class="image-link">
+      <img src="img/分割线.png" alt="图片" class="rectangle-image image6 lazy">
+    </a>
+    <div class="image-container-2">
+      <a>
+        <img src="img/花泽绫音.png" alt="图片" class="circle-image lazy">
+      </a>
+      <p class="bold-text">花泽绫音，是一个小女孩的名字为“花泽绫音”，电影画面也有呈现，片中女主天野阳菜的弟弟天野凪曾有两位前任女友，她们的名字分贝是“香菜”和“绫音”。</p>
+    </div>
+    <a class="image-link">
+      <img src="img/分割线.png" alt="图片" class="rectangle-image image6 lazy">
+    </a>
+    <div class="image-container-2">
+      <a>
+        <img src="img/须贺萌花.png" alt="图片" class="circle-image lazy">
+      </a>
+      <p class="bold-text">须贺萌花，有着气喘的毛病，不便外出。只有在雨小或是晴天时才方便出门。
+        由于母亲因交通事故离世，父亲圭介不被间宫夫人（明日花的母亲）所信任，目前由间宫夫人扶养，与圭介见面的次数有限。</p>
+    </div>
+  </div>
+  <footer>
+    <div id="footer-content">
+      <p style="text-align: center; font-size: 14px;">©️2023四川师范大学 计算机科学学院 软件工程 design by hallo </p>
+      <a href="http://beian.miit.gov.cn/" target="_blank"></a>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
+<audio loop="-1">
+  <source src="music/背景纯音乐主题曲.mp3" type="audio/mp3">
+</audio>
+
+<script src="js/script.js"></script>
+<script>
+  var audio = document.querySelector('audio');
+  var musicButton = document.getElementById('music-button');
+  var musicStatus = document.getElementById('music-status');
+  var isPlaying = false;  // 初始状态为暂停
+  function toggleMusic() {
+    if (isPlaying) {
+      audio.pause();
+      musicButton.classList.remove('rotating');
+      musicStatus.textContent = '▶️';
+      isPlaying = false;
+    } else {
+      audio.play();
+      musicButton.classList.add('rotating');
+      musicStatus.textContent = '⏸';
+      isPlaying = true;
+    }
+  }
+</script>
+<script>// 弹窗
+  document.getElementById("about-link").addEventListener("click", function (event) {
+    event.preventDefault(); // 阻止默认链接行为
+
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("popup-container").style.display = "block";
+  });
+
+  document.getElementById("close-button").addEventListener("click", function () {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("popup-container").style.display = "none";
+  });
+</script>

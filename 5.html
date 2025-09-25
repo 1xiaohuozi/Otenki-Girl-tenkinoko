@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>天气之子</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="wawa.ico">
+</head>
+
+<body>
+  <p> </p>
+  <div id="music-button" class="music-button" onclick="toggleMusic()">
+    <img src="img/6.png" alt="按钮图片">
+    <span id="music-status" class="play-icon">▶️</span>
+  </div>
+  <video id="video-background" autoplay loop muted>
+    <source src="img/1.mp4" type="video/mp4">
+  </video>
+  <nav class="menu">
+    <ul class="nav-list">
+      <li><a href="index.html" class="tab-active">二人の物語</a></li>
+      <li><a href="2.html">现实の晴女</a></li>
+      <li><a href="3.html">人物紹介</a></li>
+      <li><a href="OtenkiGirl-master/index.html">晴女のお店</a></li>
+      <li><a href="#">少年の語録</a></li>
+      <li class="dropdown">
+        <a href="6.html">新海誠系列</a>
+        <div class="dropdown-content">
+          <a href="#" id="about-link" style="text-align:  center;">关于我们</a>
+          <a href="6.html" style="text-align:  center;">新海誠</a>
+        </div>
+
+      </li>
+
+    </ul>
+  </nav>
+
+  <div id="overlay"></div>
+
+  <div id="popup-container">
+    <div id="popup-content">
+      <h3>小组成员</h3>
+      <p class="bold-text">1.Hallo（主题框架板块搭建与设计，内容填充与布局）</p>
+      <p class="bold-text">2.罗航（《晴女的小店》板块的javascript设计）</p>
+      <p class="bold-text">3.刘栋（《晴女的小店》板块的html页面设计）</p>
+      <button id="close-button">关闭</button>
+    </div>
+  </div>
+
+  <div id="content1">
+    <h3>少年の語録</h3>
+    <video id="video-background" autoplay loop muted>
+      <source src="img/1.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="content2">
+    <p class="bold-text">1.天气真的是很不可思议，光只是天空的模样就让人感动不已。</p>
+    <a class="image-link">
+      <img src="img/21.png" alt="图片" class="rectangle-image image2 lazy">
+    </a>
+    <a class="image-link">
+      <div class="image-container">
+        <img src="img/22.png" alt="图片" class="rectangle-image image1 lazy">
+        <div class="image-description">
+          <p class="bold-text">2.那年夏天，在那个天空之上的我们，把这个世界的样貌，彻底改变了。</p>
+          <p class="bold-text">3.“在充满暴风雨的世界，一起勇敢地爱下去”。</p>
+          <p class="bold-text">4.天气因你逆转，世界因你天晴。</p>
+          <p class="bold-text">5.无论你在哪里，我务必拼尽全力去见你。</p>
+        </div>
+      </div>
+    </a>
+    <p class="bold-text">6.天空比大海还要深，是个未知的世界。</p>
+    <a class="image-link">
+      <img src="img/20.png" alt="图片" class="rectangle-image image2 lazy">
+    </a>
+    <a class="image-link">
+      <div class="image-container">
+        <img src="img/23.png" alt="图片" class="rectangle-image image1 lazy">
+        <div class="image-description">
+          <p class="bold-text">7.我从来不知道，渴望蓝天的人居然有那么多。</p>
+          <p class="bold-text">8.人啊一上了年纪，就很难改变自我最看重的东西的顺序了。</p>
+          <p class="bold-text">9.最幸福的事莫过于最爱的人就在身边,还来不及思念又相见</p>
+          <p class="bold-text">10.比起晴天我更想要阳菜</p>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <footer>
+    <div id="footer-content">
+      <p style="text-align: center; font-size: 14px;">©️2023四川师范大学 计算机科学学院 软件工程 design by hallo </p>
+      <a href="http://beian.miit.gov.cn/" target="_blank"></a>
+    </div>
+  </footer>
+
+</html>
+</body>
+
+<audio loop="-1">
+  <source src="music/背景纯音乐主题曲.mp3" type="audio/mp3">
+</audio>
+
+<script src="js/script.js"></script>
+<script>
+  var audio = document.querySelector('audio');
+  var musicButton = document.getElementById('music-button');
+  var musicStatus = document.getElementById('music-status');
+  var isPlaying = false;  // 初始状态为暂停
+  function toggleMusic() {
+    if (isPlaying) {
+      audio.pause();
+      musicButton.classList.remove('rotating');
+      musicStatus.textContent = '▶️';
+      isPlaying = false;
+    } else {
+      audio.play();
+      musicButton.classList.add('rotating');
+      musicStatus.textContent = '⏸';
+      isPlaying = true;
+    }
+  }
+</script>
+<script>// 弹窗
+  document.getElementById("about-link").addEventListener("click", function (event) {
+    event.preventDefault(); // 阻止默认链接行为
+
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("popup-container").style.display = "block";
+  });
+
+  document.getElementById("close-button").addEventListener("click", function () {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("popup-container").style.display = "none";
+  });
+</script>

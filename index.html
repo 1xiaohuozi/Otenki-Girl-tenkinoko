@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>天气之子</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="wawa.ico">
+</head>
+
+<body>
+  <p> </p>
+  <div id="music-button" class="music-button" onclick="toggleMusic()">
+    <img src="img/6.png" alt="按钮图片">
+    <span id="music-status" class="play-icon">▶️</span>
+  </div>
+  <video id="video-background" autoplay loop muted>
+    <source src="img/1.mp4" type="video/mp4">
+  </video>
+  <nav class="menu">
+    <ul class="nav-list">
+      <li><a href="#" class="tab-active">二人の物語</a></li>
+      <li><a href="2.html">现实の晴女</a></li>
+      <li><a href="3.html">人物紹介</a></li>
+      <li><a href="OtenkiGirl-master/index.html">晴女のお店</a></li>
+      <li><a href="5.html">少年の語録</a></li>
+      <li class="dropdown">
+        <a href="6.html">新海誠系列</a>
+        <div class="dropdown-content">
+          <a href="#" id="about-link" style="text-align:  center;">关于我们</a>
+          <a href="6.html" style="text-align:  center;">新海誠</a>
+        </div>
+
+      </li>
+
+    </ul>
+  </nav>
+
+  <div id="overlay"></div>
+
+  <div id="popup-container">
+    <div id="popup-content">
+      <h3>小组成员</h3>
+      <p class="bold-text">1.Hallo（主题框架板块搭建与设计，内容填充与布局）</p>
+      <p class="bold-text">2.罗航（《晴女的小店》板块的javascript设计）</p>
+      <p class="bold-text">3.刘栋（《晴女的小店》板块的html页面设计）</p>
+      <button id="close-button">关闭</button>
+    </div>
+  </div>
+
+  <div id="content1">
+    <h3>天気の子</h3>
+    <video id="video-background" autoplay loop muted>
+      <source src="img/1.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="content2">
+    <h1>Weathering with you</h1>
+    <a class="image-link">
+      <div class="image-container">
+        <img src="img/2.jpg" alt="图片" class="rectangle-image image1 lazy">
+        <div class="image-description">
+          <p class="bold-text thin">
+            电影的故事发生在一个东京连续下雨的夏天，这是由于全球变暖导致的气候异常。在这样的环境下，人们的生活受到了很大的影响，不仅交通、工作、学习等方面都受到了困扰，而且人们的心情也变得沮丧和压抑。在这样的背景下，帆高和阳菜相遇了。帆高是一个从小岛逃离到东京的高中生，他为了生存而打各种零工，没有家庭和朋友的支持，只有一个梦想就是成为一名作家。阳菜是一个能够改变天气的少女，她和她的弟弟住在一间破旧的神社里，没有父母的照顾，只有一个愿望就是让天空放晴。两个孤独的灵魂在这个阴雨绵绵的城市里相互吸引，开始了一段奇妙的恋情。
+          </p>
+        </div>
+      </div>
+    </a>
+    <p class="bold-text thin">帆高从小就经历了悲惨的家暴，因为无法忍受父亲的殴打与辱骂，所以选择离家出走，只身一人来到了东京。</p>
+    <a class="image-link">
+      <img src="img/3.jpg" alt="图片" class="rectangle-image image2 lazy">
+    </a>
+    <p class="bold-text thin">
+      收获自由之后的帆高看着眼前的一切，感到十分迷茫，因为自由似乎没有他想象中那么美好。帆高在找工作期间四处碰壁，感到十分无奈，就在他对生活失去信心的时候，阳菜的出现，令帆高如沐春风。两人的命运也因为阳菜送给帆高的汉堡包连接到了一起。
+    </p>
+    <a class="image-link">
+      <img src="img/4.png" alt="图片" class="rectangle-image image3 lazy">
+    </a>
+    <p class="bold-text thin">
+      后来，帆高成功找到了工作，在一家小杂志社里面当编辑，他偶然间发现阳菜具有操控天气的超能力，于是两人就开始合作，创建了一个网站，帮助各种各样的顾客实现愿望。（点击第一个网站图片跳转到100%晴女许愿网站哟/ᐠ｡ꞈ｡ᐟ\）</p>
+    <a href="OtenkiGirl-master/index.html" onclick="showConfirmation()">
+      <img src="img/5.png" alt="晴女帮你找回阳光" class="rectangle-image image4 lazy">
+    </a>
+    <a onclick="showConfirmation()">
+      <img src="img/7.png" alt="晴女帮你找回阳光" class="rectangle-image image4 lazy">
+    </a>
+    <a onclick="showConfirmation()">
+      <img src="img/8.png" alt="晴女帮你找回阳光" class="rectangle-image image4 lazy">
+    </a>
+    <p class="bold-text thin">在两人的共同努力下，生活渐渐变好了，未来的日子也多了一丝期望。只可惜好景不长，阳菜莫名其妙地消失了，这时帆高才意识到自己早已喜欢上了阳菜。</p>
+    <a class="image-link">
+      <div class="image-container">
+        <img src="img/10.jpg" alt="图片" class="rectangle-image image5 lazy">
+        <div class="image-description">
+          <p class="bold-text thin">最终，帆高突破万难，找到了失去超能力的阳菜，但也被警察带走，强制返回了家乡。</p>
+        </div>
+      </div>
+    </a>
+    <p class="bold-text thin">若干年后，两人再次相遇在曾经大水弥漫的地铁口处，新的故事又开始了......</p>
+  </div>
+
+  <footer>
+    <div id="footer-content">
+      <p style="text-align: center; font-size: 14px;">©️2023四川师范大学 计算机科学学院 软件工程 design by hallo </p>
+      <a href="http://beian.miit.gov.cn/" target="_blank"></a>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
+<audio loop="-1">
+  <source src="music/背景纯音乐主题曲.mp3" type="audio/mp3">
+</audio>
+
+<script src="js/script.js"></script>
+<script>//音乐需手动播放
+  var audio = document.querySelector('audio');
+  var musicButton = document.getElementById('music-button');
+  var musicStatus = document.getElementById('music-status');
+  var isPlaying = false;  // 初始状态为暂停
+  function toggleMusic() {
+    if (isPlaying) {
+      audio.pause();
+      musicButton.classList.remove('rotating');
+      musicStatus.textContent = '▶️';
+      isPlaying = false;
+    } else {
+      audio.play();
+      musicButton.classList.add('rotating');
+      musicStatus.textContent = '⏸';
+      isPlaying = true;
+    }
+  }
+</script>
+
+<script>// 弹窗
+  document.getElementById("about-link").addEventListener("click", function (event) {
+    event.preventDefault(); // 阻止默认链接行为
+
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("popup-container").style.display = "block";
+  });
+
+  document.getElementById("close-button").addEventListener("click", function () {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("popup-container").style.display = "none";
+  });
+</script>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>天气之子</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="wawa.ico">
+</head>
+
+<body>
+  <p> </p>
+  <div id="music-button" class="music-button" onclick="toggleMusic()">
+    <img src="img/6.png" alt="按钮图片">
+    <span id="music-status" class="play-icon">▶️</span>
+  </div>
+  <video id="video-background" autoplay loop muted>
+    <source src="img/1.mp4" type="video/mp4">
+  </video>
+  <nav class="menu">
+    <ul class="nav-list">
+      <li><a href="index.html" class="tab-active">二人の物語</a></li>
+      <li><a href="#">现实の晴女</a></li>
+      <li><a href="3.html">人物紹介</a></li>
+      <li><a href="OtenkiGirl-master/index.html">晴女のお店</a></li>
+      <li><a href="5.html">少年の語録</a></li>
+      <li class="dropdown">
+        <a href="6.html">新海誠系列</a>
+        <div class="dropdown-content">
+          <a href="#" id="about-link" style="text-align:  center;">关于我们</a>
+          <a href="6.html" style="text-align:  center;">新海誠</a>
+        </div>
+
+      </li>
+
+    </ul>
+  </nav>
+
+  <div id="overlay"></div>
+
+  <div id="popup-container">
+    <div id="popup-content">
+      <h3>小组成员</h3>
+      <p class="bold-text">1.Hallo（主题框架板块搭建与设计，内容填充与布局）</p>
+      <p class="bold-text">2.罗航（《晴女的小店》板块的javascript设计）</p>
+      <p class="bold-text">3.刘栋（《晴女的小店》板块的html页面设计）</p>
+      <button id="close-button">关闭</button>
+    </div>
+  </div>
+
+  <div id="content1">
+    <h3>现实の晴女</h3>
+
+    <video id="video-background">
+      <source src="img/1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div id="content2">
+    <h4>和阳菜最后相遇的地方</h4>
+    <div class="video-container">
+      <video id="video" controls>
+        <source src="img/9.mp4" type="video/mp4">
+      </video>
+    </div>
+    <a class="image-link">
+      <img src="img/分割线.png" alt="图片" class="rectangle-image image6 lazy">
+    </a>
+    <h4>阿呆每天都不想动-点击图片跳转到COS视频 (๑•̀ㅂ•́)و✧</h4>
+    <div class="image-container-2">
+      <a
+        href="https://www.bilibili.com/video/BV1BJ411q73B/?share_source=copy_web&vd_source=bc3e3a16c1e78f3bb929445ea86a3ce1">
+        <img src="img/11.png" alt="图片" class="rectangle-image image4 lazy">
+      </a>
+      <a href="https://www.bilibili.com/video/BV1BJ411q73B/?share_source=copy_web&vd_source=bc3e3a16c1e78f3bb929445ea86a3ce1"
+        class="image-link-right">
+        <img src="img/14.png" alt="图片" class="rectangle-image image4 lazy">
+      </a>
+    </div>
+    <a href="https://www.bilibili.com/video/BV1BJ411q73B/?share_source=copy_web&vd_source=bc3e3a16c1e78f3bb929445ea86a3ce1"
+      class="image-link">
+      <img src="img/12.png" alt="图片" class="rectangle-image image4 lazy">
+    </a>
+    <div class="image-container-2">
+      <a
+        href="https://www.bilibili.com/video/BV1BJ411q73B/?share_source=copy_web&vd_source=bc3e3a16c1e78f3bb929445ea86a3ce1">
+        <img src="img/13.png" alt="图片" class="rectangle-image image4 lazy">
+      </a>
+
+      <a href="https://www.bilibili.com/video/BV1BJ411q73B/?share_source=copy_web&vd_source=bc3e3a16c1e78f3bb929445ea86a3ce1"
+        class="image-link-right">
+        <img src="img/15.png" alt="图片" class="rectangle-image image4 lazy">
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div id="footer-content">
+      <p style="text-align: center; font-size: 14px;">©️2023四川师范大学 计算机科学学院 软件工程 design by hallo </p>
+      <a href="http://beian.miit.gov.cn/" target="_blank"></a>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
+<audio loop="-1">
+  <source src="music/背景纯音乐主题曲.mp3" type="audio/mp3">
+</audio>
+
+<script src="js/script.js"></script>
+<script>
+  var audio = document.querySelector('audio');
+  var musicButton = document.getElementById('music-button');
+  var musicStatus = document.getElementById('music-status');
+  var isPlaying = false;  // 初始状态为暂停
+  function toggleMusic() {
+    if (isPlaying) {
+      audio.pause();
+      musicButton.classList.remove('rotating');
+      musicStatus.textContent = '▶️';
+      isPlaying = false;
+    } else {
+      audio.play();
+      musicButton.classList.add('rotating');
+      musicStatus.textContent = '⏸';
+      isPlaying = true;
+    }
+  }
+</script>
+<script>
+  var video = document.getElementById("video");
+  var playButton = document.getElementById("play-button");
+  function toggleVideo() {
+    if (video.paused) {
+      video.play();
+      playButton.style.display = "none";
+    } else {
+      video.pause();
+      playButton.style.display = "block";
+    }
+  }
+</script>
+<script>// 弹窗
+  document.getElementById("about-link").addEventListener("click", function (event) {
+    event.preventDefault(); // 阻止默认链接行为
+
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("popup-container").style.display = "block";
+  });
+
+  document.getElementById("close-button").addEventListener("click", function () {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("popup-container").style.display = "none";
+  });
+</script>
