@@ -1,35 +1,86 @@
-1 引言
-1.1 编写目的
-这是我大学一来第一个前端小项目，出于兴趣，确实是印象颇深
-<img width="2507" height="1256" alt="QQ截图20250925203544" src="https://github.com/user-attachments/assets/7b6698b3-cc04-4045-8b28-f72c3ede4dd1" />
+# Otenki Girl — Weathering with You Fan Website
 
-1.2 背景
-"天气之子"是一部备受欢迎的日本动画电影，为了庆祝该电影的上映，我们决定创建一个主题网站来提供相关信息、图片和音乐等内容。
-<img width="2498" height="1269" alt="QQ截图20250925204627" src="https://github.com/user-attachments/assets/bd4b6893-1cba-4807-a8c0-05642e037086" />
+English | [日本語](README.ja.md) | [简体中文](README.zh-CN.md)
 
+![Weathering with You themed home page](assets/cover.png)
 
-2 任务概述
-2.1 项目概述
-2.1.1 项目来源及背景
-"天气之子"是一部由新海诚执导的日本动画电影，该电影于20XX年上映并获得了广泛的关注和喜爱。主题网站旨在为电影提供一个互动平台，以便粉丝们获取相关信息、图片和音乐。
-<img width="2087" height="1102" alt="QQ截图20250925204638" src="https://github.com/user-attachments/assets/07c34d8d-7929-4aeb-9e03-834d741841cc" />
+A front-end fan website inspired by *Weathering with You*. It presents story and character content through themed pages, video backgrounds, images, music, navigation, and interactive overlays.
 
-2.1.2 项目目标
-创建一个吸引人的主题网站，能够展示"天气之子"电影的相关内容。
-提供电影故事和角色的描述。
-包含视频背景、图片、音乐播放器和导航菜单等功能。
+## Screenshots
 
-2.1.3 系统功能概述
-视频背景：自动播放、循环、静音的视频背景。
-导航菜单：包含链接到不同页面的导航菜单，其中"新海誠系列"包含一个下拉菜单。
-内容部分：包含多个区域，其中content1和content2是主要区域。
-content1：包含一个级别3标题和与导航菜单视频背景相同的视频。
-content2：包含级别1标题、电影故事描述、相关图片、帆高描述、合作创建网站的描述以及关于未来相遇的描述等内容。
-音乐播放器：包含播放/暂停按钮和背景音乐文件。
-弹窗：点击"关于我们"链接时打开的包含小组成员描述和关闭按钮的弹窗。
-<img width="1925" height="1262" alt="QQ截图20250925204650" src="https://github.com/user-attachments/assets/aa2ffd56-947b-493b-b25d-cf17a516eb04" />
+| Themed page | Content section |
+| --- | --- |
+| ![Themed page](assets/screenshot-01.png) | ![Content section](assets/screenshot-02.png) |
 
+## Features
 
+- Full-page looping video backgrounds
+- Story and character presentation pages
+- Responsive navigation with a Makoto Shinkai series page
+- Background-music play and pause controls
+- Image panels and animated visual content
+- “About us” modal
+- A bundled `OtenkiGirl-master` subproject for the sunshine-service concept
 
+## Tech Stack
 
-这里我用了大佬IvanLuLyf集成的https://github.com/IvanLuLyf/OtenkiGirl 网站实现了天气之子中阳菜买卖晴天的网站（仍然是纯前端，没有借助数据库，后端数据使用GUN）
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Static images, GIFs, MP4 video, and MP3 audio
+- GUN is used by the bundled `OtenkiGirl-master` implementation as described by the original project documentation
+
+## Project Structure
+
+```text
+.
+├── assets/                 # README screenshots
+├── css/                    # Main site styles
+├── img/                    # Images and video
+├── js/                     # Main site scripts
+├── music/                  # Background music
+├── OtenkiGirl-master/      # Bundled sunshine-service subproject
+├── index.html              # Main entry page
+├── 2.html
+├── 3.html
+├── 5.html
+└── 6.html
+```
+
+## Run Locally
+
+No build step is required.
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/1xiaohuozi/Otenki-Girl-tenkinoko.git
+   cd Otenki-Girl-tenkinoko
+   ```
+
+2. Open `index.html` in a modern browser.
+
+You can also serve the directory with any static HTTP server. For example:
+
+```bash
+python -m http.server 8000
+```
+
+Then visit `http://localhost:8000/`.
+
+## Usage
+
+- Use the navigation menu to move between the themed pages.
+- Use the music button to start or pause the background track.
+- Open the Makoto Shinkai series page to browse the visual panels.
+- Select “About us” to open the team-information modal.
+
+Modern browsers may block automatic audio playback, so background music starts after user interaction.
+
+## Attribution
+
+The original Chinese documentation states that the bundled sunshine-service implementation uses work integrated by [IvanLuLyf/OtenkiGirl](https://github.com/IvanLuLyf/OtenkiGirl). Keep the upstream attribution when redistributing or modifying that portion.
+
+## Disclaimer
+
+This is a fan-made educational project. Names, images, video, audio, and other media associated with *Weathering with You* belong to their respective rights holders. The repository does not include a standalone license file.
